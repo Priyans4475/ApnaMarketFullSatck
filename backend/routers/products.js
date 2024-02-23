@@ -95,20 +95,20 @@ router.post('/',uploadOptions.single('images'),async(req,res)=>{
      return res.status(400).send('Invalid category')
     }
 
-    const file=req.file;
-    if(!file)
-    {
-     return res.status(400).send('Image is not present there');
-    }
-    const fileName=file.filename;
+    // const file=req.file;
+    // if(!file)
+    // {
+    //  return res.status(400).send('Image is not present there');
+    // }
+    // const fileName=file.filename;
 
-    const basePath=`${req.protocol}://${req.get('host')}/uploads`
-    console.log(basePath);
+    // const basePath=`${req.protocol}://${req.get('host')}/uploads`
+    // console.log(basePath);
     let product=new Product({
         name:req.body.name,
         description:req.body.description,
         richdescription:req.body.richdescription,
-        images:`${basePath}${fileName}`,
+        images:req.body.images,
         brand:req.body.brand,
         price:req.body.price,
         category:req.body.category,

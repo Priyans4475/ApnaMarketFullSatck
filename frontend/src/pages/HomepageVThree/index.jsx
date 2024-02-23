@@ -12,32 +12,32 @@ const HomepageVThreePage = () => {
       <div className="bg-white-A700 flex flex-col font-poppins items-center justify-start mx-auto w-full">
         <header className="flex items-center justify-center md:px-5 w-full">
           <div className="flex flex-col items-center justify-center w-full">
-            <div className="flex flex-col items-center justify-start w-full">
-              <div className="bg-white-A700 flex flex-row items-center justify-start p-[30px] sm:px-5 w-full">
-                <div className="flex md:flex-col flex-row md:gap-5 items-end justify-start ml-[114px] w-[88%]">
-                  <div className="flex sm:flex-col flex-row gap-14 items-start justify-start mb-[5px] md:mt-0 mt-2 w-auto sm:w-full">
+            <div className="flex flex-row items-center justify-start w-full">
+              <div className="bg-white-A700 flex flex-row items-center justify-start sm:px-5 w-full">
+                <div className="flex md:flex-row flex-row md:gap-5 items-end justify-start ml-[114px] w-[88%]">
+                  <div className="flex sm:flex-col flex-row gap-14 items-start justify-center  md:mt-0  w-auto sm:w-full">
                     <Text
-                      className="common-pointer text-gray-800 text-lg w-auto"
-                      size="txtPoppinsRegular18"
+                      className="common-pointer text-gray-800 text-lg w-auto  font-bold"
+                      // size="txtPoppinsRegular18"
                       onClick={() => navigate("/categorieswithsidebar")}
                     >
                       Categories
                     </Text>
-                    <Text
+                    {/* <Text
                       className="text-gray-800 text-lg w-auto"
                       size="txtPoppinsRegular18"
                     >
                       New Arrival
-                    </Text>
+                    </Text> */}
                     <Text
-                      className="text-gray-800 text-lg w-auto"
-                      size="txtPoppinsRegular18"
+                      className="text-gray-800 text-lg font-bold w-auto"
+                      // size="txtPoppinsRegular18"
                     >
                       Features
                     </Text>
                     <Text
-                      className="text-gray-800 text-lg w-auto"
-                      size="txtPoppinsRegular18"
+                      className="text-gray-800 text-lg w-auto font-bold"
+                      // size="txtPoppinsRegular18"
                     >
                       Collections
                     </Text>
@@ -52,7 +52,7 @@ const HomepageVThreePage = () => {
                       className="text-2xl md:text-[22px] text-gray-800 sm:text-xl"
                       size="txtPoppinsBold24"
                     >
-                      Elliye{" "}
+                      Apna Market{" "}
                     </Text>
                   </div>
                   <Img
@@ -65,9 +65,9 @@ const HomepageVThreePage = () => {
               <Line className="bg-gray-50 h-px w-[85%]" />
             </div>
             <div className="bg-white-A700 flex flex-row items-start justify-center max-w-[1920px] w-full">
-              <div className="flex md:flex-col flex-row gap-6 items-center justify-center w-[67%]">
+              <div className="flex md:flex-row flex-row gap-6 items-center justify-center w-[67%]">
                 <div className="bg-white-A700 flex flex-col h-[120px] items-center justify-start p-[18px] w-[120px]">
-                  <div className="flex flex-col gap-2 items-center justify-start mb-[5px] w-auto">
+                  <div className="flex flex-col gap-2 items-center justify-start mb-[5px] w-auto cursor-pointer hover:bg-gray-500 hover:rounded-lg">
                     <Img
                       className="h-12 w-12"
                       src="images/img_cut_48X48.svg"
@@ -82,7 +82,7 @@ const HomepageVThreePage = () => {
                   </div>
                 </div>
                 <div className="bg-white-A700 flex flex-col h-[120px] items-center justify-start p-[18px] w-[120px]">
-                  <div className="flex flex-col gap-2 items-center justify-start mb-[5px] w-auto">
+                  <div className="flex flex-col gap-2 items-center justify-start mb-[5px] w-auto cursor-pointer hover:bg-gray-500 hover:rounded-lg">
                     <Img
                       className="h-12 w-12"
                       src="images/img_info.svg"
@@ -97,14 +97,14 @@ const HomepageVThreePage = () => {
                   </div>
                 </div>
                 <div className="bg-white-A700 flex flex-col h-[120px] items-center justify-start p-[18px] w-[120px]">
-                  <div className="flex flex-col gap-2 items-center justify-start mb-[5px] w-auto">
+                  <div className="flex flex-col gap-2 items-center justify-start mb-[5px] w-auto  cursor-pointer hover:bg-gray-500 hover:rounded-lg">
                     <Img
-                      className="h-12 w-12"
+                      className="h-12 w-12 "
                       src="images/img_location.svg"
                       alt="location"
                     />
                     <Text
-                      className="text-bluegray-100 text-lg w-auto"
+                      className="text-bluegray-100 text-lg w-auto hover:text-gray-200 "
                       size="txtPoppinsRegular18Bluegray100"
                     >
                       Pants
@@ -112,7 +112,7 @@ const HomepageVThreePage = () => {
                   </div>
                 </div>
                 <div className="bg-white-A700 flex flex-col h-[120px] items-center justify-start p-[18px] w-[120px]">
-                  <div className="flex flex-col gap-2 items-center justify-start mb-[5px] w-auto">
+                  <div className="flex flex-col gap-2 items-center justify-start mb-[5px] w-auto cursor-pointer hover:bg-gray-500 hover:rounded-lg">
                     <Img
                       className="h-12 w-12"
                       src="images/img_user.svg"
@@ -127,7 +127,7 @@ const HomepageVThreePage = () => {
                   </div>
                 </div>
                 <div className="bg-white-A700 flex flex-col h-[120px] items-center justify-start p-[18px] w-[120px]">
-                  <div className="flex flex-col gap-2 items-center justify-start mb-[5px] w-auto">
+                  <div className="flex flex-col gap-2 items-center justify-start mb-[5px] w-auto cursor-pointer hover:bg-gray-500 hover:rounded-lg">
                     <Img
                       className="h-12 w-12"
                       src="images/img_settings.svg"
@@ -146,7 +146,7 @@ const HomepageVThreePage = () => {
                   orientation="horizontal"
                 >
                   <div className="bg-white-A700 flex flex-col h-[120px] items-center justify-start p-[11px] w-full">
-                    <div className="flex flex-col gap-2 items-center justify-start mb-3 mt-[7px] w-auto">
+                    <div className="flex flex-col gap-2 items-center justify-start mb-3 mt-[7px] w-auto cursor-pointer hover:bg-gray-500 hover:rounded-lg">
                       <Img
                         className="h-12 w-12"
                         src="images/img_signal.svg"
@@ -161,7 +161,7 @@ const HomepageVThreePage = () => {
                     </div>
                   </div>
                   <div className="bg-white-A700 flex flex-col h-[120px] items-center justify-start p-[18px] w-full">
-                    <div className="flex flex-col gap-2 items-center justify-start mb-[5px] w-auto">
+                    <div className="flex flex-col gap-2 items-center justify-start mb-[5px] w-auto cursor-pointer hover:bg-gray-500 hover:rounded-lg">
                       <Img
                         className="h-12 w-12"
                         src="images/img_skirt.svg"
@@ -176,7 +176,7 @@ const HomepageVThreePage = () => {
                     </div>
                   </div>
                   <div className="bg-white-A700 flex flex-col h-[120px] items-center justify-start p-2.5 w-full">
-                    <div className="flex flex-col gap-2 items-center justify-start mb-[13px] mt-2 w-auto">
+                    <div className="flex flex-col gap-2 items-center justify-start mb-[13px] mt-2 w-auto cursor-pointer hover:bg-gray-500 hover:rounded-lg">
                       <Img
                         className="h-12 w-12"
                         src="images/img_bra.svg"
@@ -191,14 +191,14 @@ const HomepageVThreePage = () => {
                     </div>
                   </div>
                   <div className="bg-white-A700 flex flex-col h-[120px] items-center justify-start p-[18px] w-full">
-                    <div className="flex flex-col gap-2 items-center justify-start mb-[5px] w-auto">
+                    <div className="flex flex-col gap-2 items-center justify-start mb-[5px] w-auto ">
                       <Img
                         className="h-12 w-12"
                         src="images/img_car_48X48.svg"
                         alt="car"
                       />
                       <Text
-                        className="text-bluegray-100 text-lg w-auto"
+                        className="text-bluegray-100 text-lg w-auto cursor-pointer hover:bg-gray-500 hover:rounded-lg"
                         size="txtPoppinsRegular18Bluegray100"
                       >
                         More
@@ -218,8 +218,8 @@ const HomepageVThreePage = () => {
             <div className="bg-white-A700_82 flex flex-col items-start justify-start p-[157px] md:px-10 sm:px-5 w-full">
               <div className="flex flex-col items-start justify-start md:ml-[0] ml-[126px] w-[43%] md:w-full">
                 <Button
-                  className="cursor-pointer font-medium font-poppins leading-[normal] min-w-[271px] text-2xl md:text-[22px] text-center sm:text-xl"
-                  shape="square"
+                  className="cursor-pointer font-medium font-poppins leading-[normal] rounded-lg opacity-80 min-w-[271px] text-2xl md:text-[22px] text-center sm:text-xl "
+                
                   color="white_A700"
                   size="md"
                   variant="fill"
@@ -227,7 +227,7 @@ const HomepageVThreePage = () => {
                   50% Off Limited Offer
                 </Button>
                 <Text
-                  className="mt-8 md:text-5xl text-7xl text-gray-800"
+                  className="mt-8 md:text-5xl text-7xl  text-gray-800"
                   size="txtPlayfairDisplayBold72"
                 >
                   Summer Collection
@@ -240,7 +240,7 @@ const HomepageVThreePage = () => {
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.{" "}
                 </Text>
                 <Button
-                  className="cursor-pointer flex h-[60px] items-center justify-center mt-20 w-[245px]"
+                  className="cursor-pointer flex h-[60px] items-center justify-center mt-20 w-[245px] rounded-full"
                   rightIcon={
                     <Img
                       className="h-12 ml-2.5 mr-[33px] my-1.5"
@@ -248,7 +248,7 @@ const HomepageVThreePage = () => {
                       alt="arrow_right"
                     />
                   }
-                  shape="square"
+                  // shape="square"
                   color="gray_800"
                   size="md"
                   variant="fill"
@@ -261,7 +261,7 @@ const HomepageVThreePage = () => {
               </div>
             </div>
           </div>
-          <div className="flex flex-col gap-[42px] items-center justify-start max-w-[1632px] mt-8 mx-auto pt-2 md:px-5 w-full">
+          <div className="flex flex-col gap-[42px] items-center justify-start  max-w-[1630px] mt-8 mx-auto pt-2 md:px-5 w-full">
             <div className="flex flex-row md:gap-10 items-center justify-between w-full">
               <Text
                 className="text-4xl sm:text-[32px] md:text-[34px] text-gray-800"
@@ -287,7 +287,7 @@ const HomepageVThreePage = () => {
                       src="images/img_warmpantspxl7.png"
                       alt="RectangleThirtyNine"
                     />
-                    <div className="flex flex-col gap-2 items-center justify-start w-auto">
+                    <div className="flex flex-col gap-2 items-center justify-start w-auto ">
                       <Text
                         className="text-2xl md:text-[22px] text-center text-gray-800 sm:text-xl"
                         size="txtPoppinsMedium24"
@@ -384,7 +384,7 @@ const HomepageVThreePage = () => {
               <div className="flex md:flex-1 flex-col items-center justify-start w-[32%] md:w-full">
                 <div className="bg-gray-50 flex flex-col items-center justify-start pb-[55px] w-full">
                   <Img
-                    className="h-[400px] sm:h-auto object-cover w-full"
+                    className="h-[400px] sm:h-auto object-cover w-[90%]"
                     src="images/img_placeholder_400X521.png"
                     alt="placeholder Two"
                   />
