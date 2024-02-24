@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "pages/Home";
 import NotFound from "pages/NotFound";
+import Addproduct from "pages/Addproduct";
 const Cart = React.lazy(() => import("pages/Cart"));
 const ProductDetails = React.lazy(() => import("pages/ProductDetails"));
 const ProductList = React.lazy(() => import("pages/ProductList"));
@@ -24,6 +25,7 @@ const ProjectRoutes = () => {
           <Route path="/productlist" element={<ProductList />} />
           <Route path="/productdetails" element={<ProductDetails />} />
           <Route path="/cart" element={<Cart />} />
+          <Route path="/addproduct" element={<Addproduct />} />
         </Routes>
       </Router>
     </React.Suspense>

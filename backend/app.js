@@ -7,7 +7,7 @@ const authjwt=require('./helper/jwt');
 // const errorhandler=require('./helper/err-handler');
 
 const mongoose=require('mongoose');
-
+app.use(express.static('public'));
 app.use(bodyParser.json());
 app.use(morgan('tiny'));
 // app.use(authjwt());

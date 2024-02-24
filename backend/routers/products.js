@@ -20,12 +20,12 @@ const storage = multer.diskStorage({
         {
             uploaderr=null
         }
-      cb(uploaderr, "./uploads")
+      cb(uploaderr, "public/upload")
     },
     filename: function (req, file, cb) {
-      const fileName=file.originalname.split(' ').join('-');
+      const fileName=file.originalname.split('.').join('-');
       const extension=FILE_TYPE_MAP[file.mimetype];
-      cb(null, fileName + '-' + Date.now()+ '.' + extension)
+      cb(null, fileName + '.' + extension)
     }
   })
   
@@ -95,20 +95,20 @@ router.post('/',uploadOptions.single('images'),async(req,res)=>{
      return res.status(400).send('Invalid category')
     }
 
-    // const file=req.file;
-    // if(!file)
-    // {
-    //  return res.status(400).send('Image is not present there');
-    // }
-    // const fileName=file.filename;
+    const file=req.file;
+    if(!file)
+    {
+     return res.status(400).send('Image is not present there');
+    }
+    const fileName=file.filename;
 
-    // const basePath=`${req.protocol}://${req.get('host')}/uploads`
-    // console.log(basePath);
+    const basePath=`${req.protocol}://${req.get('host')}/public/upload/`
+    console.log(basePath);
     let product=new Product({
         name:req.body.name,
         description:req.body.description,
         richdescription:req.body.richdescription,
-        images:req.body.images,
+        images:`${basePath}${fileName}`,
         brand:req.body.brand,
         price:req.body.price,
         category:req.body.category,
