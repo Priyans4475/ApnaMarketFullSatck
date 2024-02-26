@@ -3,9 +3,10 @@ const app=express();
 require('dotenv/config');
 const morgan= require('morgan');
 const bodyParser= require('body-parser');
+const cors =require('cors');
 const authjwt=require('./helper/jwt');
 // const errorhandler=require('./helper/err-handler');
-
+app.use(cors())
 const mongoose=require('mongoose');
 app.use(express.static('public'));
 app.use(bodyParser.json());

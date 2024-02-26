@@ -17,6 +17,9 @@ const Home = () => {
          <Links name={"ProductList"} to={"productlist"} />
          <Links name={"ProductDetails"} to={"productdetails"} />
          <Links name={"Cart"} to={"cart"} />
+         <Links name={"Addproduct"} to={"addproduct"} />
+         <Links name={"Addcategory"} to={"addcategory"} />
+
          
 {/*        
         <li>

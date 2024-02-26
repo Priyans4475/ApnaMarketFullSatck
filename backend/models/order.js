@@ -2,8 +2,9 @@ const mongoose =require('mongoose');
 
 const orderSchema=mongoose.Schema({
     orderItems:[{
-        type:mongoose.Schema.Types.ObjectId,
-        ref:'OrderItem',
+        // type:mongoose.Schema.Types.ObjectId,
+        // ref:'OrderItem',
+        type:String,
         require:true
     }],
     shippingAddress1:{
@@ -39,8 +40,9 @@ const orderSchema=mongoose.Schema({
         type:Number,
     },
     user:{
-        type:mongoose.Schema.Types.ObjectId,
-        ref:'User',
+        // type:mongoose.Schema.Types.ObjectId,
+        // ref:'User',
+        type:String
     },
     dateOrdered:{
         type:Date,

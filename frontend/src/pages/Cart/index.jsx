@@ -295,7 +295,7 @@ const CartPage = () => {
               </Button>
               <Button
                 className="common-pointer cursor-pointer font-medium h-12 leading-[normal] text-center text-lg w-[171px]"
-                onClick={() => navigate("")}
+                onClick={() => navigate("/placeorder")}
                 shape="square"
                 color="gray_800"
                 size="sm"

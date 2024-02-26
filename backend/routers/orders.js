@@ -29,29 +29,30 @@ router.get('/:id',async(req,res)=>{
 
 
 router.post('/',async(req,res)=>{
-    const orderItemsIds= Promise.all(req.body.orderItems.map(async (orderItem) =>{
-        let newOrderItem=new OrderItem({
-            quantity:orderItem.quantity,
-            product:orderItem.product
-        })
+//     const orderItemsIds= Promise.all(req.body.orderItems.map(async (orderItem) =>{
+//         let newOrderItem=new OrderItem({
+//             quantity:orderItem.quantity,
+//             product:orderItem.product
+//         })
 
-        newOrderItem= await newOrderItem.save();
+//         newOrderItem= await newOrderItem.save();
 
-        return newOrderItem._id;
-    }))
-   const orderItemsIdsResolved=await orderItemsIds;
-    console.log(orderItemsIdsResolved);
- // ****************************************Method for calculating totalprices of the orders.**************************************************
-    const totalItemPrice= await Promise.all(orderItemsIdsResolved.map(async orderItemId=>{
-        const orderItem=await OrderItem.findById(orderItemId).populate('product','price')
-        const totalPrice=orderItem.product.price * orderItem.quantity;
-        return totalPrice; 
-    }))
+//         return newOrderItem._id;
+//     }))
+//    const orderItemsIdsResolved=await orderItemsIds;
+//     console.log(orderItemsIdsResolved);
+//  // ****************************************Method for calculating totalprices of the orders.**************************************************
+//     const totalItemPrice= await Promise.all(orderItemsIdsResolved.map(async orderItemId=>{
+//         const orderItem=await OrderItem.findById(orderItemId).populate('product','price')
+//         const totalPrice=orderItem.product.price * orderItem.quantity;
+//         return totalPrice; 
+//     }))
 
-    const newtotalPrice=totalItemPrice.reduce((a,b)=>a+b,0);
+//     const newtotalPrice=totalItemPrice.reduce((a,b)=>a+b,0);
 
     let order=new Order({
-     orderItems:orderItemsIdsResolved,
+    //  orderItems:orderItemsIdsResolved,
+    orderItems:req.body.orderItems,
      shippingAddress1:req.body.shippingAddress1,
      shippingAddress2:req.body.shippingAddress2,
      city:req.body.city,
@@ -59,7 +60,8 @@ router.post('/',async(req,res)=>{
      country:req.body.country,
      phone:req.body.phone,
      status:req.body.status,
-     totalPrice:newtotalPrice,
+    //  totalPrice:newtotalPrice,
+    totalPrice:req.body.totalPrice,
      user:req.body.user,
      dateOrdered:req.body.dateOrdered,
      

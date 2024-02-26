@@ -28,10 +28,13 @@ const productSchema=mongoose.Schema({
         type:Number,
         require:0,
     },
+    // category:{
+    //     type:mongoose.Schema.Types.ObjectId,
+    //     ref:"category",
+    //     require:true,
+    // },
     category:{
-        type:mongoose.Schema.Types.ObjectId,
-        ref:"category",
-        require:true,
+          type:String,
     },
     countInStock:{
         type:Number,

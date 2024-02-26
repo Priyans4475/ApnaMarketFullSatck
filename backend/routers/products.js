@@ -89,26 +89,26 @@ router.put('/:id',async(req,res)=>
 })
 // ****************************************API for Creating the details of the Product.***********************************************
 router.post('/',uploadOptions.single('images'),async(req,res)=>{
-    const category = await Category.findById(req.body.category)
-    if(!category)
-    {
-     return res.status(400).send('Invalid category')
-    }
+    // const category = await Category.findById(req.body.category)
+    // if(!category)
+    // {
+    //  return res.status(400).send('Invalid category')
+    // }
 
-    const file=req.file;
-    if(!file)
-    {
-     return res.status(400).send('Image is not present there');
-    }
-    const fileName=file.filename;
+    // const file=req.file;
+    // if(!file)
+    // {
+    //  return res.status(400).send('Image is not present there');
+    // }
+    // const fileName=file.filename;
 
-    const basePath=`${req.protocol}://${req.get('host')}/public/upload/`
-    console.log(basePath);
+    // const basePath=`${req.protocol}://${req.get('host')}/public/upload/`
+    // console.log(basePath);
     let product=new Product({
         name:req.body.name,
         description:req.body.description,
         richdescription:req.body.richdescription,
-        images:`${basePath}${fileName}`,
+        images:req.body.image,
         brand:req.body.brand,
         price:req.body.price,
         category:req.body.category,

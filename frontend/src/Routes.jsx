@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "pages/Home";
 import NotFound from "pages/NotFound";
 import Addproduct from "pages/Addproduct";
+import Addcategory from "pages/Addcategory";
+import Placeorders from "pages/Placeorders";
 const Cart = React.lazy(() => import("pages/Cart"));
 const ProductDetails = React.lazy(() => import("pages/ProductDetails"));
 const ProductList = React.lazy(() => import("pages/ProductList"));
@@ -26,6 +28,8 @@ const ProjectRoutes = () => {
           <Route path="/productdetails" element={<ProductDetails />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/addproduct" element={<Addproduct />} />
+          <Route path="/addcategory" element={<Addcategory />} />
+          <Route path="/placeorder" element={<Placeorders />} />
         </Routes>
       </Router>
     </React.Suspense>
